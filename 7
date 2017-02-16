@@ -1,0 +1,13 @@
+def diaginal_reverse(matrix):
+    for m in matrix:
+        print(m)
+    print()
+    new_matrix = [[], [], []]
+    for m in matrix:
+        for i in m:
+            index = m.index(i)
+            new_matrix[index].append(i)
+    for m in new_matrix:
+       print(m)
+matrix = [[1, 2, 3],[4, 5, 6], [7, 8, 9]]
+diaginal_reverse(matrix)
