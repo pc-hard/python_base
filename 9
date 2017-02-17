@@ -1,0 +1,12 @@
+def balance_chek(str):
+    count = 0
+    for i in str:
+        if i == "[":
+            count += 1
+        if i == "]":
+            if count < 0:
+                print('no balance')
+                return (not bool(count))
+            count -= 1
+    return not bool(count)
+print(balance_chek('[][][][]'))

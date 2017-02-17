@@ -1,0 +1,25 @@
+def something(inpt):
+    arr = []
+    for i in range(len(inpt)):
+        if i % 2 == 0:
+            arr.append(inpt[i])
+    return arr
+a = something([1, 2, 4, 8, 7, 0, 55])
+b = something("Hell world")
+def cryptho(some_str, key):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    new_str = ""
+    length = len(alphabet)
+    for i in some_str:
+        if i in alphabet:
+            new_index = alphabet.index(i) + key
+            if new_index > length:
+                new_str = new_str + alphabet[new_index - length]
+            else:
+                new_str = new_str + alphabet[new_index]
+        else:
+            new_str = new_str + str(i)
+    return new_str
+print(cryptho("ab5cdz", 2))
+print(a)
+print(b)
